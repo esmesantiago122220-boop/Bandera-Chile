@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.mycompany</groupId>
+    <artifactId>BanderaChileJOGL</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>26</maven.compiler.release>
+        <exec.mainClass>com.mycompany.banderachilejogl.BanderaChileJOGL</exec.mainClass>
+    </properties>
+
+    <!-- Repositorio oficial de JogAmp para resolver las librerias JOGL -->
+    <repositories>
+        <repository>
+            <id>jogamp-remote</id>
+            <name>JogAmp Remote Repository</name>
+            <url>https://www.jogamp.org/deployment/maven/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!-- Libreria principal de JOGL -->
+        <dependency>
+            <groupId>org.jogamp.jogl</groupId>
+            <artifactId>jogl-all-main</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+
+        <!-- Libreria de GlueGen RT para vinculacion con bibliotecas nativas -->
+        <dependency>
+            <groupId>org.jogamp.gluegen</groupId>
+            <artifactId>gluegen-rt-main</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+    </dependencies>
+</project>
